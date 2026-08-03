@@ -8,17 +8,13 @@ one API. These are runnable examples of putting its SDK into a real project.
 
 | Example | Stack | Run it |
 |---|---|---|
-| [`typescript-node`](typescript-node) | Node 20.12+ | `npm start -- <skill-url>` |
-| [`typescript-nextjs`](typescript-nextjs) | Next.js App Router | `npm run dev` → `/skill?url=<skill-url>` |
-| [`python`](python) | Python 3.10+ | `python -m skillplus_example <skill-url>` |
+| [`typescript-node`](typescript-node) | Node + TypeScript | `npm start -- <skill-url>` |
+| [`typescript-nextjs`](typescript-nextjs) | Next.js 15 | `npm run dev` → `/skill?url=<skill-url>` |
+| [`python`](python) | Python | `python -m skillplus_example <skill-url>` |
 
 All three do the same five things: look up a skill's report, scan it if there is
 none, print every field the report carries, fetch the badge, and turn the verdict
 into an exit code. Pick the one closest to your stack and ignore the rest.
-
-You need an API key: email **skillplus@proton.me**. Then copy `.env.example` to
-`.env` and put the key in it. Running an example costs nothing — the default path
-only reads an existing report.
 
 ## What each example shows
 
@@ -69,6 +65,18 @@ OK — verdict is "safe"
 - Docs: <https://docs.skillplus.xyz>
 - TypeScript SDK: [`skillplus`](https://www.npmjs.com/package/skillplus) · [source](https://github.com/SkillPlusHQ/skillplus-typescript)
 - Python SDK: [`skillplus`](https://pypi.org/project/skillplus/) · [source](https://github.com/SkillPlusHQ/skillplus-python)
+
+## Requirements
+
+- Node.js 22 and 24 LTS. Node.js 22 is the minimum supported version
+  ([Node 20 is EOL](https://endoflife.date/nodejs)).
+- Python 3.10 or later.
+
+## Getting a key
+
+Email **skillplus@proton.me**, then copy `.env.example` to `.env` and put the key
+in it. Running an example costs nothing — the default path only reads a report
+that already exists.
 
 ---
 
