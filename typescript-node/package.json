@@ -1,0 +1,22 @@
+{
+  "name": "skillplus-example-node",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Every SkillPlus SDK call, in a plain Node CLI",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "npm run build && node --env-file-if-exists=.env dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "skillplus": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5.6"
+  },
+  "engines": {
+    "node": ">=20.12"
+  }
+}

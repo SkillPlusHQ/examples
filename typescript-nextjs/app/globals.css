@@ -1,0 +1,41 @@
+:root { color-scheme: light dark; --fg:#111; --muted:#666; --line:#e5e5e5; --bg:#fff; }
+@media (prefers-color-scheme: dark) {
+  :root { --fg:#ededed; --muted:#999; --line:#262626; --bg:#0a0a0a; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font:15px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+a { color: inherit; }
+code { font-family: ui-monospace, SFMono-Regular, monospace; font-size: .92em; }
+.page { max-width:860px; margin:0 auto; padding:48px 20px 80px; }
+h1 { font-size:24px; margin:0 0 4px; }
+h2 { font-size:13px; text-transform:uppercase; letter-spacing:.06em;
+     color:var(--muted); margin:32px 0 12px; }
+.muted { color:var(--muted); }
+.mono { font-family: ui-monospace, SFMono-Regular, monospace; font-size:13px; }
+.error { color:#dc2626; }
+.head { display:flex; justify-content:space-between; align-items:flex-start; gap:16px;
+        border-bottom:1px solid var(--line); padding-bottom:20px; }
+.verdict { padding:4px 12px; border-radius:999px; font-size:13px; font-weight:600; white-space:nowrap; }
+.verdict-safe{background:#dcfce7;color:#166534}
+.verdict-medium{background:#fef3c7;color:#92400e}
+.verdict-high{background:#fee2e2;color:#991b1b}
+.verdict-unknown{background:#e5e5e5;color:#525252}
+.tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:12px; margin-top:24px; }
+.tile { border:1px solid var(--line); border-radius:8px; padding:12px 14px;
+        display:flex; flex-direction:column; gap:2px; }
+.tile strong { font-size:20px; }
+.danger { border:1px solid #dc2626; border-radius:8px; padding:4px 20px 16px; margin-top:24px; }
+.danger h2 { color:#dc2626; }
+.cats { list-style:none; padding:0; margin:0; }
+.cats li { display:flex; gap:12px; padding:12px 0; border-top:1px solid var(--line); }
+.cats p { margin:2px 0 0; }
+.sev { flex:none; width:72px; font-size:11px; font-weight:700; text-transform:uppercase; padding-top:2px; }
+.sev-high,.sev-critical{color:#dc2626} .sev-medium{color:#d97706}
+.sev-low,.sev-safe{color:var(--muted)}
+.foot { display:flex; align-items:center; gap:16px; margin-top:40px;
+        padding-top:20px; border-top:1px solid var(--line); }
+.rescan { display:flex; align-items:center; gap:12px; margin-top:24px; }
+.rescan button { padding:8px 16px; border:1px solid var(--line); border-radius:6px;
+                 background:transparent; color:inherit; cursor:pointer; font:inherit; }
+.rescan button:hover { background:var(--line); }
